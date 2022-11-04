@@ -1,2 +1,61 @@
-# beginner_tutorials
-ENPM808X - Week 9 Assignment
+# ENPM808X - Week 9 Assignment : ROS2 Package for simple Publisher / Subscriber
+
+## Overview and Description
+
+A basic Publisher/Subscriber package for ROS2 written in C++
+
+## License
+
+MIT License
+
+## Author
+
+Tharun V. Puthanveettil
+
+## Dependencies/Assumptions
+
+This ROS2 Humble package was created and tested on ubuntu 20.02 (Linux).
+
+The colcon build is used for building this package.
+
+ROS2 Humble has to be build and sourced
+
+## To build the package
+
+Open new terminal window and type the following:
+```
+mkdir ros2_ws/src
+cd ros2_ws/src
+git clone https://github.com/Karansutradhar/beginner_tutorials.git
+cd ..
+source <path to ros2 setup>/install/setup.bash    
+colcon build
+source install/setup.bash
+```
+Open a new terminal window and type:
+```
+cd ros2_ws
+source <path to ros2 setup>/install/setup.bash    
+source install/setup.bash
+ros2 run first_publisher publisher_lambda
+```
+Open a new terminal window and type:
+```
+cd ros2_ws
+source <path to ros2 setup>/install/setup.bash    
+source install/setup.bash
+ros2 run first_subscriber subscriber_lambda
+```
+To end the process, type ctrl+C on all the terminal windows one by one.
+
+## To run Cpplint
+```
+cd ros2_ws/src
+run_cpplint.sh
+```
+
+## To run Cppcheck
+```
+cd ros2_ws/src
+run_cppcheck.sh
+```
