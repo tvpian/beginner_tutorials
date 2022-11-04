@@ -6,7 +6,7 @@ A basic Publisher/Subscriber package for ROS2 written in C++
 
 ## License
 
-MIT License
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 ## Author
 
