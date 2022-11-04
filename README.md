@@ -12,12 +12,11 @@ MIT License
 
 Tharun V. Puthanveettil
 
-## Dependencies/Assumptions
+## Assumptions
+ROS2 Humble package is created and tested on ubuntu 20.02 (Linux).
+The colcon build is used for building the package.
 
-This ROS2 Humble package was created and tested on ubuntu 20.02 (Linux).
-
-The colcon build is used for building this package.
-
+## Dependencies
 ROS2 Humble has to be build and sourced
 
 ## To build the package
