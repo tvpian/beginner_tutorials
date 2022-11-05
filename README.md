@@ -25,7 +25,7 @@ Open new terminal window and type the following:
 ```
 mkdir ros2_ws/src
 cd ros2_ws/src
-git clone https://github.com/Karansutradhar/beginner_tutorials.git
+git clone https://github.com/tvpian/beginner_tutorials.git
 cd ..
 source <path to ros2 setup>/install/setup.bash    
 colcon build
@@ -49,12 +49,12 @@ To end the process, type ctrl+C on all the terminal windows one by one.
 
 ## To run Cpplint
 ```
-cd ros2_ws/src
+cd ros2_ws
 run_cpplint.sh
 ```
 
 ## To run Cppcheck
 ```
-cd ros2_ws/src
+cd ros2_ws
 run_cppcheck.sh
 ```
