@@ -1,0 +1,32 @@
+launch:
+
+# args that can be set from the command line or a default will be used
+- arg:
+    name: "freq"
+    default: "4.0"
+
+- arg: 
+    name: "topic_name"
+    default: "old_topic"
+
+
+- node:
+    pkg: "first_publisher"
+    exec: "publisher_lambda"
+    name: "publisher_node"
+    param:
+    -
+      name: "freq"
+      value: "$(var freq)"
+    -
+      name: "topic_name"
+      value: "$(var topic_name)"
+
+- node:
+    pkg: "first_subscriber"
+    exec: "subscriber_lambda"
+    name: "subscriber_node"
+    param:
+    -   
+      name: "topic_name"
+      value: "$(var topic_name)"
