@@ -1,4 +1,4 @@
-# ENPM808X - Week 9 Assignment : ROS2 Package for simple Publisher / Subscriber
+# ENPM808X - Assignment : ROS2 Tutorials
 
 ## Overview and Description
 
@@ -97,7 +97,9 @@ run_cppcheck.sh
 ```
 rqt_console
 ```
-* Invoke rqt logger level GUI
+* To check the results of rqt_log
 ```
-rqt_logger_level
+cd ros2_ws/results
+view rqt_log_result1.png
+view rqt_log_result2.png
 ```
