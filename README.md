@@ -73,7 +73,7 @@ To end the process, type ctrl+C on all the terminal windows one by one.
 cd ros2_ws
 source <path to ros2 setup>/install/setup.bash    
 source install/setup.bash
-ros2 launch src/launch/tester_launch.yaml freq:=20.0 topic_name:="getitout"
+ros2 launch src/beginner_tutorials/src/launch/tester_launch.yaml freq:=20.0 topic_name:="getitout"
 ```
 Both the publisher and subscriber nodes are invoked with the parameters - freq & topic_name
 
