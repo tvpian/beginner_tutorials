@@ -1,2 +1,4 @@
 Done processing ./src/first_publisher/src/lambda.cpp
 Done processing ./src/first_subscriber/src/lambda.cpp
+Done processing ./src/minimal_integration_test/test/basic_test.cpp
+Total errors found: 1
