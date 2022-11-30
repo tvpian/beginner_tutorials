@@ -10,7 +10,7 @@ def generate_launch_description():
    return LaunchDescription([
       DeclareLaunchArgument(
             'enable_recording',
-            default_value='false'
+            default_value='False'
         ),
     # record all topic (chatter, service_node)
       ExecuteProcess(

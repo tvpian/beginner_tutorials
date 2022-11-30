@@ -105,15 +105,32 @@ view rqt_log_result2.png
 ```
 
 
-## To test rosbag output:
+## To test rosbag:
+### Run rosbag launch file:
+* Open terminal window and type:
+```
+cd ros2_ws
+ros2 launch src/launch/test_rosbag.py enable_recording:=True
+```
+
 ### Replay rosbag recording:
 * Open terminal window and type:
-    > ros2 bag play results/rosbag_recording
-* Open a new terminal window and type
-    > ros2 run first_subscriber subscriber_lambda
+```
+cd ros2_ws
+ros2 launch src/launch/test_rosbag.py enable_recording:=True
+// set parameter enable_recording:=False to disable rosbag recording
 
+```
+* Open a new terminal window and type
+```
+cd ros2_ws
+ros2 run first_subscriber subscriber_lambda
+```
 * To view rosbag output info:
-    > ros2 bag info results/rosbag_recording
+```
+cd ros_ws
+ros2 bag info results/rosbag_recording
+```
     - output:
     ```
     Files:             rosbag_recording_0.db3
