@@ -132,24 +132,21 @@ view rqt_log_result2.png
 
 
 ## To test tf2
-    
-    ros2 run first_publisher publisher_lambda talk 0 1 0 1 0 1
-    
-    - publishing a static tranform between frame 'talk' and 'world' with a translation of '0 1 0' and rotation of '1 0 1'
+```
+ros2 run first_publisher publisher_lambda talk 0 1 0 1 0 1
+```
+  - publishing a static tranform between frame 'talk' and 'world' with a translation of '0 1 0' and rotation of '1 0 1'
   
 Open a new terminal window and type:
 
-    ros2 run tf2_ros tf2_echo world talk
-    
+```
+ros2 run tf2_ros tf2_echo world talk
+```
     - output:
-    ```
-    At time 0.0
-    - Translation: [0.000, 1.000, 0.000]
-    - Rotation: in Quaternion [0.421, 0.230, 0.421, 0.770]
-    ```
-
-
-
+        At time 0.0
+        - Translation: [0.000, 1.000, 0.000]
+        - Rotation: in Quaternion [0.421, 0.230, 0.421, 0.770]
+        
 ## To perform Gtest
 ```
 cd ros2_ws
@@ -159,12 +156,13 @@ ros2 run first_publisher publisher_lambda talk 0 1 0 1 0 1
 ```
 Note: As the designed Gtest is for testing the server block ensure the server is started.
 
-Output without verbose:
-```
-colcon test --packages-select minimal_integration_test
-```
-Output with verbose:
-```
-colcon test --event-handlers console_direct+ --packages-select minimal_integration_test
-```
-To end the process, type ctrl+C on all the terminal windows one by one.
+Open a new terminal window and type:
+
+  - Output without verbose:
+    ```
+    colcon test --packages-select minimal_integration_test
+    ```
+  - Output with verbose:
+    ```
+    colcon test --event-handlers console_direct+ --packages-select minimal_integration_test
+    ```
