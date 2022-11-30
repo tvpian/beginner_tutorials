@@ -103,3 +103,68 @@ cd ros2_ws/results
 view rqt_log_result1.png
 view rqt_log_result2.png
 ```
+
+
+## To test rosbag output:
+### Replay rosbag recording:
+* Open terminal window and type:
+    > ros2 bag play results/rosbag_recording
+* Open a new terminal window and type
+    > ros2 run first_subscriber subscriber_lambda
+
+* To view rosbag output info:
+    > ros2 bag info results/rosbag_recording
+    - output:
+    ```
+    Files:             rosbag_recording_0.db3
+    Bag size:          135.0 KiB
+    Storage id:        sqlite3
+    Duration:          40.629s
+    Start:             Nov 30 2022 10:58:43.964 (1669823923.964)
+    End:               Nov 30 2022 10:59:24.593 (1669823964.593)
+    Messages:          479
+    Topic information: Topic: /tf_static | Type: tf2_msgs/msg/TFMessage | Count: 1 | Serialization Format: cdr
+                       Topic: /rosout | Type: rcl_interfaces/msg/Log | Count: 396 | Serialization Format: cdr
+                       Topic: /topic_old | Type: std_msgs/msg/String | Count: 82 | Serialization Format: cdr
+                       Topic: /parameter_events | Type: rcl_interfaces/msg/ParameterEvent | Count: 0 | Serialization Format: cdr
+    ```
+    Note: '/topic_old' is the topic to which publisher is publishing instead of '/chatter'
+
+
+## To test tf2
+    
+    ros2 run first_publisher publisher_lambda talk 0 1 0 1 0 1
+    
+    - publishing a static tranform between frame 'talk' and 'world' with a translation of '0 1 0' and rotation of '1 0 1'
+  
+Open a new terminal window and type:
+
+    ros2 run tf2_ros tf2_echo world talk
+    
+    - output:
+    ```
+    At time 0.0
+    - Translation: [0.000, 1.000, 0.000]
+    - Rotation: in Quaternion [0.421, 0.230, 0.421, 0.770]
+    ```
+
+
+
+## To perform Gtest
+```
+cd ros2_ws
+source <path to ros2 setup>/install/setup.bash    
+source install/setup.bash 
+ros2 run first_publisher publisher_lambda talk 0 1 0 1 0 1
+```
+Note: As the designed Gtest is for testing the server block ensure the server is started.
+
+Output without verbose:
+```
+colcon test --packages-select minimal_integration_test
+```
+Output with verbose:
+```
+colcon test --event-handlers console_direct+ --packages-select minimal_integration_test
+```
+To end the process, type ctrl+C on all the terminal windows one by one.
