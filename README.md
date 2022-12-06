@@ -223,7 +223,9 @@ ros2 launch src/launch/launch_roomba.py enable_recording:=True
                       Topic: /cmd_vel | Type: geometry_msgs/msg/Twist | Count: 3328 | Serialization Format: cdr
                       Topic: /parameter_events | Type: rcl_interfaces/msg/ParameterEvent | Count: 0 | Serialization Format: cdr
     ```
+    
     Note: The above command runs the walker node and starts rosbag recording
-
+    [Link to the rosbag output]( https://drive.google.com/drive/folders/13vFILeFBZj49pg3zcKc9cRHGrMtcTC79?usp=sharing)
+   
 - Assumptions
   - The version of ros2 used for the experiment is Galactic
